@@ -190,7 +190,7 @@ if not os.path.exists(logname):
         logwriter = csv.writer(logfile, delimiter=',')
         logwriter.writerow(['epoch', 'train loss', 'train acc', 'test loss', 'test acc'])
 
-for epoch in range(start_epoch, 200):
+for epoch in range(start_epoch, 300):
     adjust_learning_rate(optimizer, epoch)
     train_loss, train_acc = train(epoch)
     test_loss, test_acc = test(epoch)
